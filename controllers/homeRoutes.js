@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/recipe/:id', async (req, res) => {
   try {
-    const recipeData = await Project.findByPk(req.params.id, {
+    const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -55,7 +55,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Recipe }],
     });
 
     const user = userData.get({ plain: true });
