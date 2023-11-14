@@ -27,9 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/recipe/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const recipeData = await Project.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,10 +38,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const recipe = recipeData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('recipe', {
+      ...recipe,
       logged_in: req.session.logged_in
     });
   } catch (err) {
