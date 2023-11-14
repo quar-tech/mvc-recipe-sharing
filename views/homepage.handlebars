@@ -1,16 +1,20 @@
 <!-- Loop over each object in the recipes array -->
+<div class="row row-cols-3 g-2">
 {{#each recipes as |recipe| }}
-<div class="row mb-4 project card-body charlie">
+<div class="col mb-4 project">
+  <div class="card p-2 charlie">
   <div>
     <h2 class="card-title">
       <a class="alpha" href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
     </h2>
-    <p class="card-subtitle">Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
+    <p class="card-subtitle fw-light">Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
   </div>
   <div>
     <p class="card-text my-4">
       {{recipe.description}}
     </p>
   </div>
+  </div>
 </div>
 {{/each}}
+</div>
