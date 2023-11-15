@@ -1,14 +1,17 @@
 [
   {
     "name": "Baked Cod Recipe With Lemon And Garlic",
+    "ingredients": "Cod, lemon, garlic, olive oil, butter, salt, pepper, parsley",
     "description": "Mix together the lemon juice, olive oil, and melted butter in a shallow bowl (do not add the garlic yet)."
   },
   {
     "name": "Baked White Fish Recipe, Mediterranean-Style",
+    "ingredients": "Fish, garlic, olive oil, lemon juice, parsley, salt, pepper, paprika, cumin, coriander, cayenne pepper",
     "description": "Pat the fish dry and season with salt and pepper on both sides. Brush a 9 ½ x 13-inch baking dish with a little extra virgin olive oil and put the fish in it."
   },
   {
     "name": "20-Minute Fish Piccata",
+    "ingredients": "paprika, oregano, garlic powder, salt, pepper, fish, olive oil, butter, garlic, lemon juice, capers, parsley",
     "description": "Season the fish on both sides with salt and pepper. Mix the oregano, paprika, and garlic powder and season the flesh side of the fish."
   }
 ]
