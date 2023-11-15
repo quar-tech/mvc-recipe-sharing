@@ -18,6 +18,9 @@ Recipe.init(
     description: {
       type: DataTypes.STRING,
     },
+    ingredients: {
+      type: DataTypes.STRING,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
