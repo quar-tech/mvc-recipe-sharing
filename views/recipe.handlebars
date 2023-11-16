@@ -1,9 +1,11 @@
-<div class="card-body text-center">
+<div class="card-body text-center recipe-details">
   <h2 class="card-title">{{name}}</h2>
   <p class="card-text">{{ingredients}}</p>
   <p class="card-text">{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>
-    <button class="btn btn-primary">Share Recipe</button>
+    <button class="btn btn-primary" id="mail-button" data-desc="{{ description }}">Share Recipe</button>
   </p>
 </div>
+
+<script src="/js/recipe.js"></script>

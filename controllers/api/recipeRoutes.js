@@ -2,6 +2,17 @@ const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.ethereal.email',
+  port: 587,
+  auth: {
+      user: 'alessandra.jacobson@ethereal.email',
+      pass: 'd4aUVs2dcYEh6YbqVX'
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
@@ -33,6 +44,20 @@ router.delete('/:id', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.post('/email', withAuth, async (req, res) => {
+  // console.log("desc:",req.body.description);
+  // async..await is not allowed in global scope, must use a wrapper
+        // send mail with defined transport object
+        const info = await transporter.sendMail({
+          from: '"Fred Foo 👻" <foo@example.com>', // sender address
+          to: "alessandra.jacobson@ethereal.email", // list of receivers
+          subject: "Hello ✔", // Subject line
+          text: `${req.body.description}`, // plain text body
+          html: `${req.body.description}`, // html body
+        });
+        res.json(info);
 });
 
 module.exports = router;
