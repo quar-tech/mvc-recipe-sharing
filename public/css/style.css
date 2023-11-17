@@ -54,7 +54,7 @@ header, .project:not(:last-child) {
 }
 
 .echo {
-  background-color: rgb(205,92,92);
+  background-color: rgb(139, 64, 0);
   color: #ffffff;
 }
 
@@ -69,4 +69,8 @@ header, .project:not(:last-child) {
 
 .hotel {
   justify-content: center;
+}
+
+.indigo {
+  background-color: rgb(250, 249, 246);
 }
