@@ -5,7 +5,7 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
     try {
-      console.log(req.body)
+      console.log(req.body.body)
       const newComment = await Comment.create({
         body: req.body.body,
         recipe_id: req.body.recipe_id,
@@ -22,6 +22,7 @@ router.post('/', withAuth, async (req, res) => {
   });
 
   router.delete('/:id', withAuth, async (req, res) => {
+    console.log("hello")
     try {
       const commentData = await Comment.destroy({
         where: {

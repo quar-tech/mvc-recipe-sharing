@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/recipe/:id', async (req, res) => {
+router.get('/recipes/:id', async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
@@ -37,13 +37,13 @@ router.get('/recipe/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['body'],
+          attributes: ['body', 'id'],
         }
       ],
     });
 
     const recipe = recipeData.get({ plain: true });
-
+    console.log(recipe)
     res.render('recipe', {
       ...recipe,
       logged_in: req.session.logged_in
