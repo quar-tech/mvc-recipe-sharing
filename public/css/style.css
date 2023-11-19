@@ -78,3 +78,12 @@ header, .project:not(:last-child) {
 .juliette {
   margin-bottom: 0.625rem;
 }
+
+#input-email {
+  display: block;
+  margin: 0px auto 10px auto;
+}
+
+.p-text-size {
+  font-size: 1.1rem;
+}
