@@ -4,9 +4,15 @@
   <p class="card-text">{{ingredients}}</p>
   <p class="card-text">{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class="btn echo" id="mail-button" data-desc="{{ description }}">Share Recipe</button>
-  </p>
+  <form class="form input-form" data-desc="{{ description }}">
+    <div class="form-group">
+      <label class="p-text-size" for="input-email">With whom do you want to share this recipe? Enter their email address and click Share Recipe:</label>
+      <input class="form-input w-50" type="text" id="input-email"/>
+      <p>
+        <button class="btn echo" id="mail-button">Share Recipe</button>
+      </p>
+    </div>
+  </form>
 </div>
 </div>
 
