@@ -1,17 +1,12 @@
 const mailHandler = async (event) => {
-    event.preventDefault();
-
     if (event.target.hasAttribute('data-desc')) {
       const description = event.target.getAttribute('data-desc');
-      const toEmail = document.querySelector('#input-email').value.trim();
-      if (!toEmail) {
-        alert('No email address provided.');
-        return;
-      }
+  
+      console.log('description', description);
 
       const response = await fetch(`/api/recipes/email`, {
         method: 'POST',
-        body: JSON.stringify({ description, toEmail }),
+        body: JSON.stringify({ description }),
         headers: {
             'Content-Type':'application/json'
         }
@@ -21,13 +16,15 @@ const mailHandler = async (event) => {
         window.location.assign('/login');
       } else if (response.ok) {
         console.log('response',response);
-        console.log('Mail sent');
+        
+        // document.location.replace('/profile');
+        alert('Mail sent');
       } else {
-        console.log('Failed to send mail');
+        alert('Failed to send mail');
       }
     }
   };
 
   document
-    .querySelector('.input-form')
-    .addEventListener('submit', mailHandler);
+    .querySelector('#mail-button')
+    .addEventListener('click', mailHandler);
