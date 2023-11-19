@@ -10,7 +10,6 @@ router.post('/', withAuth, async (req, res) => {
         body: req.body.body,
         recipe_id: req.body.recipe_id,
         user_id: req.session.user_id,
-      
       });
   
       console.log(newComment);
