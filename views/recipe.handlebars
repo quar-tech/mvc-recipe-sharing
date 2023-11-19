@@ -10,4 +10,36 @@
 </div>
 </div>
 
+<form class="form new-comment-form">
+  <input type="hidden" value="{{id}}" id="recipe-id" name="recipe-id"/>
+  <div class="form-group">
+    <label for="comment-body" class="alpha fs-4 text fw-medium">Add comment:</label>
+    <textarea class="delta" id="comment-body" name="comment-body"></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn echo mb-3">Submit</button>
+  </div>
+</form>
+
+{{#if comments.length}}
+<div class="card charlie">
+<div class="comment-list row">
+  <h3  class="card-title juliette m-3">Comments:</h3>
+
+  {{#each comments as |comment|}}
+  <div class="m-2">
+    <div class="col-md-8">
+      <p class="delta d-flex flex-row mb-0">{{comment.body}}</p>
+      <p class="d-inline ">Created by User {{user_id}} 
+        on {{format_date comment.date_created}}</p>
+      <p class="d-inline"><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"  data-id="{{comment.id}}">Delete</a></p>
+    </div>
+
+  </div>
+  {{/each}}
+</div>
+</div>
+{{/if}}
+
 <script src="/js/recipe.js"></script>
+<script src="/js/comment.js"></script>
