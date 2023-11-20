@@ -18,12 +18,12 @@ const mailHandler = async (event) => {
       });
       
       if (response.redirected) {
-        window.location.assign('/login');
+          window.location.assign('/login');
       } else if (response.ok) {
-        console.log('response',response);
-        console.log('Mail sent');
+          console.log('response',response);
+          alert('Email sent.');
       } else {
-        console.log('Failed to send mail');
+          alert('Failed to send mail.');
       }
     }
   };
