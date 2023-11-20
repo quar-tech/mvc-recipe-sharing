@@ -13,7 +13,7 @@ const mailHandler = async (event) => {
       });
       
       if (response.redirected) {
-          window.location.assign('/login');
+        window.location.assign('/login');
       } else if (response.ok) {
         console.log('response',response);
         
