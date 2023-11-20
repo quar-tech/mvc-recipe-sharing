@@ -13,7 +13,7 @@ Application URL:
 
 ## Usage
 
-In this Recipe Sharing site, users can publish their recipes, comment on other user's recipes and send the recipes by email. In order for a user to upload a recipe or leave a comment, he/she has to be login in first.
+In this Recipe Sharing site, users can publish their recipes, comment on other user's recipes and send the recipes by email. In order for a user to upload a recipe or leave a comment, he/she has to be login in first. Users can also share recipes to an email address they choose, authenticated through Gmail.
 
 ![The recipe sharing application](/assets/culinary-connect.png)      
 

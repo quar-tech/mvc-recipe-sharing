@@ -1,12 +1,17 @@
 const mailHandler = async (event) => {
+    event.preventDefault();
+
     if (event.target.hasAttribute('data-desc')) {
       const description = event.target.getAttribute('data-desc');
-  
-      console.log('description', description);
+      const toEmail = document.querySelector('#input-email').value.trim();
+      if (!toEmail) {
+        alert('No email address provided.');
+        return;
+      }
 
       const response = await fetch(`/api/recipes/email`, {
         method: 'POST',
-        body: JSON.stringify({ description }),
+        body: JSON.stringify({ description, toEmail }),
         headers: {
             'Content-Type':'application/json'
         }
@@ -24,5 +29,5 @@ const mailHandler = async (event) => {
   };
 
   document
-    .querySelector('#mail-button')
-    .addEventListener('click', mailHandler);
+    .querySelector('.input-form')
+    .addEventListener('submit', mailHandler);
