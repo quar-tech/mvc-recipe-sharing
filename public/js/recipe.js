@@ -16,11 +16,9 @@ const mailHandler = async (event) => {
         window.location.assign('/login');
       } else if (response.ok) {
         console.log('response',response);
-        
-        // document.location.replace('/profile');
-        alert('Mail sent');
+        console.log('Mail sent');
       } else {
-        alert('Failed to send mail');
+        console.log('Failed to send mail');
       }
     }
   };
