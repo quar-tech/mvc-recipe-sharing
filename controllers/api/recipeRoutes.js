@@ -4,12 +4,15 @@ const withAuth = require('../../utils/auth');
 
 const nodemailer = require("nodemailer");
 
+// const mailUser = process.env.mailUser; May revisit this method when securing authentication
+// const mailPass = process.env.mailPass;
+
 const transporter = nodemailer.createTransport({
   host: 'smtp.ethereal.email',
   port: 587,
   auth: {
-      user: 'alessandra.jacobson@ethereal.email',
-      pass: 'd4aUVs2dcYEh6YbqVX'
+      user: 'tonymagrady@gmail.com',
+      pass: 'lqdywchghygtefxw'
   }
 });
 
