@@ -3,15 +3,15 @@ const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 const nodemailer = require("nodemailer");
 
-const mailUser = process.env.mailUser;
-const mailPass = process.env.mailPass;
+// const mailUser = process.env.mailUser;  Next version: Use .env or similar solution for secure auth.
+// const mailPass = process.env.mailPass;
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
   auth: {
-      user: mailUser,
-      pass: mailPass
+      user: 'tonymagrady@gmail.com',
+      pass: 'lqdywchghygtefxw'
   }
 });
 
