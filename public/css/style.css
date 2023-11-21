@@ -87,3 +87,10 @@ header, .project:not(:last-child) {
 .p-text-size {
   font-size: 1.1rem;
 }
+
+.share-recipe {
+  color: rgb(139, 64, 0);
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}

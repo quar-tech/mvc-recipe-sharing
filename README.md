@@ -9,7 +9,7 @@ Introducing Culinary Connect, the ultimate recipe-sharing platform! Whether you'
 ## Installation
 
 Repository URL: https://github.com/quar-tech/mvc-recipe-sharing           
-Application URL: 
+Application URL: https://mvc-culinary-connect-e00ad0e3e10d.herokuapp.com/
 
 ## Usage
 
